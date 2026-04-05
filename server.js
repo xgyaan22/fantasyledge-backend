@@ -3,7 +3,7 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors());
-app.use(express.json());
+app.get("/", (req, res) => res.send("FantasyEdge backend is live"));
 
 app.post("/analyze", async (req, res) => {
   const { t1, t2, venue, mtime, toss } = req.body;
